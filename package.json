@@ -1,0 +1,23 @@
+{
+  "name": "tarjeta-interactiva",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-sass": "sass --watch sass:./src/estilos"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BR2E/tarjeta-interactiva.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BR2E/tarjeta-interactiva/issues"
+  },
+  "homepage": "https://github.com/BR2E/tarjeta-interactiva#readme",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
