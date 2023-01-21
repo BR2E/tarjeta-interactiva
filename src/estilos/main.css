@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.tarjeta {
+  width: 100%;
+  height: 40vh;
+  background-color: hsl(278deg, 68%, 11%);
+  position: relative;
+  color: hsl(270deg, 3%, 87%);
+  z-index: -2;
+  margin-bottom: 100px;
+}
+.tarjeta__caja {
+  position: absolute;
+  width: 270px;
+  height: 160px;
+  border: none;
+  border-radius: 8px;
+}
+.tarjeta__datos {
+  top: 122px;
+  left: 10px;
+  background-image: linear-gradient(to right top, #6448fe, #6939e2, #6929c7, #6619ad, #600594);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.8rem;
+}
+.tarjeta__datos::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: hsl(0deg, 0%, 100%);
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.tarjeta__datos::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 60px;
+}
+.tarjeta__datos--bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+}
+.tarjeta__cvv {
+  top: 30px;
+  right: 10px;
+  background-color: hsl(270deg, 3%, 87%);
+  z-index: -1;
+}
+.tarjeta__cvv--numero {
+  display: inline-block;
+  background-color: hsl(279deg, 6%, 55%);
+  width: 100%;
+  height: 30px;
+  position: relative;
+  top: 40%;
+  font-size: 1.2rem;
+  text-align: end;
+  padding: 6px 20px;
+  letter-spacing: 2px;
+}
+.tarjeta__cvv--numero::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #333;
+  top: -48px;
+  right: 0;
+}
+
+.inactive {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */

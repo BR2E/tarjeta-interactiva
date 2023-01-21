@@ -14,37 +14,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 
-
+    <link rel="stylesheet" href="../src/estilos/main.css">
 </head>
 
 <body>
 
-    0000 0000 0000 0000
-    Jane Appleseed
-    00/00
+    <div class="tarjeta">
 
-    000
+        <div class="tarjeta__datos tarjeta__caja">
+            <span class="tarjeta__datos--numero">0000 0000 0000 0000</span>
+            <section class="tarjeta__datos--bottom">
+                <span>Nombre</span>
+                <span>00/00</span>
+            </section>
+        </div>
 
-    Cardholder Name
-    e.g. Jane Appleseed
+        <div class="tarjeta__cvv tarjeta__caja">
+            <span class="tarjeta__cvv--numero">000</span>
+        </div>
 
-    Card Number
-    e.g. 1234 5678 9123 0000
+    </div>
 
-    Exp. Date (MM/YY)
-    MM
-    YY
 
-    CVC
-    e.g. 123
+    <div class="formulario">
 
-    Confirm
+        <label for="nombre">Nombre del titular de la tarjeta
+            <input type="text" placeholder="Nombre" id="nombre">
+        </label>
 
-    <!-- Completed state start -->
+        <label for="numero">Numero de la tarjeta
+            <input type="number" placeholder="Numero" id="numero">
+        </label>
 
-    Thank you!
-    We've added your card details
-    Continue
+        <section class="formulario__datosFecha">
+            <label for="mes">
+                <input type="text" placeholder="MM" id="mes">
+            </label>
+            <input type="text" placeholder="YY" id="year">
+            <label for="">
+                <input type="text" placeholder="CVC">
+            </label>
+            <button class="formulario__datosFecha--confirmar">Confirmar</button>
+        </section>
+
+    </div>
+
+    <div class="datosEnviados inactive">
+        <Span></Span>
+        <h2>Gracias</h2>
+        <p>Hemos añadido los datos de su tarjeta</p>
+        <button>Continuar</button>
+    </div>
 
 
 </body>
