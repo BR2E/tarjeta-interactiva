@@ -30,36 +30,41 @@
         </div>
 
         <div class="tarjeta__cvv tarjeta__caja">
+            <span class="tarjeta__spanVacio"></span>
             <span class="tarjeta__cvv--numero">000</span>
         </div>
 
     </div>
 
 
-    <div class="formulario">
+    <div class="formulario inactive">
 
-        <label for="nombre">Nombre del titular de la tarjeta
-            <input type="text" placeholder="Nombre" id="nombre">
-        </label>
+        <label for="nombre">Nombre del titular de la tarjeta</label>
+        <input type="text" placeholder="Efren Ruiz" id="nombre">
 
-        <label for="numero">Numero de la tarjeta
-            <input type="number" placeholder="Numero" id="numero">
-        </label>
+        <label for="numero">Numero de la tarjeta</label>
+        <input type="number" placeholder="1092 0192 3749 1923" id="numero">
 
         <section class="formulario__datosFecha">
-            <label for="mes">
+            <div class="formulario__datosFecha--label">
+                <label for="mes">Fecha exp.</label>
+                <label for="cvc">CVC</label>
+            </div>
+            
+            <div class="formulario__datosFecha--input">
                 <input type="text" placeholder="MM" id="mes">
-            </label>
-            <input type="text" placeholder="YY" id="year">
-            <label for="">
-                <input type="text" placeholder="CVC">
-            </label>
-            <button class="formulario__datosFecha--confirmar">Confirmar</button>
+                <input type="text" placeholder="YY" id="year">
+                <input type="text" placeholder="CVC" id="cvc">
+            </div>
+
+            
         </section>
+        
+        <button class="formulario__datosFecha--confirmar">Confirmar</button>
 
     </div>
 
-    <div class="datosEnviados inactive">
+    <div class="datosEnviados ">
         <Span></Span>
         <h2>Gracias</h2>
         <p>Hemos añadido los datos de su tarjeta</p>
