@@ -112,7 +112,6 @@
     input{
         padding: 12px;
         width: 80%;
-        margin-bottom: 2rem;
         border: 1px solid $Darkgrayishviolet;
         outline: none;
         border-radius: 1rem;
@@ -125,9 +124,10 @@
 
     &__datosFecha--input {
         display: flex;
+        margin-bottom: 2rem;
     }
 
-    &__datosFecha--input input[type="text"]{
+    &__datosFecha--input input[type="number"]{
         width: 80px;
         margin-left: 10px;
     }
@@ -173,9 +173,16 @@
         font-size: 1.6rem;
         color: $Darkgrayishviolet;
         margin-bottom: 2rem;
+        text-align: center;
     }
 }
 
+
+.error{
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    color: red;
+}
 
 .inactive {
     display: none;

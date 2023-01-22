@@ -22,16 +22,16 @@
     <div class="tarjeta">
 
         <div class="tarjeta__datos tarjeta__caja">
-            <span class="tarjeta__datos--numero">0000 0000 0000 0000</span>
+            <span class="tarjeta__datos--numero" id="tarjetaNumero">0000 0000 0000 0000</span>
             <section class="tarjeta__datos--bottom">
-                <span>Nombre</span>
-                <span>00/00</span>
+                <span id="tarjetaNombre">Nombre</span>
+                <span id="tarjetafecha">00/00</span>
             </section>
         </div>
 
         <div class="tarjeta__cvv tarjeta__caja">
             <span class="tarjeta__spanVacio"></span>
-            <span class="tarjeta__cvv--numero">000</span>
+            <span class="tarjeta__cvv--numero" id="tarjetaCvc">000</span>
         </div>
 
     </div>
@@ -41,9 +41,11 @@
 
         <label for="nombre">Nombre del titular de la tarjeta</label>
         <input type="text" placeholder="Efren Ruiz" id="nombre">
-
+        <p class="error errorNombre"></p>
+        
         <label for="numero">Numero de la tarjeta</label>
         <input type="number" placeholder="1092 0192 3749 1923" id="numero">
+        <p class="error errorNumero"></p>
 
         <section class="formulario__datosFecha">
             <div class="formulario__datosFecha--label">
@@ -52,15 +54,17 @@
             </div>
             
             <div class="formulario__datosFecha--input">
-                <input type="text" placeholder="MM" id="mes">
-                <input type="text" placeholder="YY" id="year">
-                <input type="text" placeholder="CVC" id="cvc">
+                <input type="number" placeholder="MM" id="mes">
+                <input type="number" placeholder="YY" id="year">
+                <input type="number" placeholder="CVC" id="cvc">
             </div>
 
+            <p class="error errorFecha"></p>
+            <p class="error errorCvc"></p>
             
         </section>
         
-        <button class="btnContinuar">Confirmar</button>
+        <button class="btnContinuar" id="confirnar">Confirmar</button>
 
     </div>
 
@@ -68,10 +72,10 @@
         <Span class="datosEnviados__span"></Span>
         <h2 class="datosEnviados__title">Gracias</h2>
         <p class="datosEnviados__text">Hemos añadido los datos de su tarjeta</p>
-        <button class="btnContinuar">Continuar</button>
+        <button class="btnContinuar" id="continuar">Continuar</button>
     </div>
 
-
+<script src="../src/index.js"></script>
 </body>
 
 </html>
