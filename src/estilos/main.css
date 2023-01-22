@@ -31,7 +31,10 @@ html {
 .tarjeta__datos {
   top: 122px;
   left: 10px;
-  background-image: linear-gradient(to right top, #6448fe, #6939e2, #6929c7, #6619ad, #600594);
+  background-image: url("../../images/bg-card-front.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,7 +132,8 @@ html {
   width: 80px;
   margin-left: 10px;
 }
-.formulario__datosFecha--confirmar {
+
+.btnContinuar {
   width: 300px;
   height: 40px;
   outline: none;
@@ -139,6 +143,31 @@ html {
   color: white;
   font-size: 1.8rem;
   margin-bottom: 20px;
+}
+
+.datosEnviados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.datosEnviados__span {
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+  background-image: url(../../images/icon-complete.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.datosEnviados__title {
+  font-size: 3.2rem;
+  margin: 2rem;
+}
+.datosEnviados__text {
+  font-size: 1.6rem;
+  color: hsl(279deg, 6%, 55%);
+  margin-bottom: 2rem;
 }
 
 .inactive {
