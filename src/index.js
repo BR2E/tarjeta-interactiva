@@ -16,9 +16,17 @@ const errorNumero = document.querySelector('.errorNumero');
 const errorFecha = document.querySelector('.errorFecha');
 const errorCvc = document.querySelector('.errorCvc');
 
+const containerForm = document.getElementById('form');
+const containerDatosEnviados = document.getElementById('containerDatosEnviados');
+
 
 
 function validarTarjeta() {
+
+    let nombreCorrecto = false;
+    let numeroCorrecto = false;
+    let fechaCorrecto = false;
+    let cvcCorrecto = false;
 
     let validarNumero = numero.value
         .toString()
@@ -48,8 +56,12 @@ function validarTarjeta() {
 
     if(validarNombre.length > 25){
         errorNombre.textContent = 'Nombre demasiado largo';
+    }else if(validarNombre.length < 6){
+        errorNombre.textContent = 'Nombre demasiado corto';
     }else{
         tarjetaNombre.textContent = validarNombre;
+        nombreCorrecto = true;
+        errorNombre.textContent = '';
     }
     
 
@@ -64,6 +76,7 @@ function validarTarjeta() {
 
         tarjetaNumero.textContent = nuevoNumero.join('');
         errorNumero.textContent = '';
+        numeroCorrecto = true;
     }
 
 
@@ -72,6 +85,7 @@ function validarTarjeta() {
     } else {
         tarjetafecha.textContent = `${mes.value}/${year.value}`;
         errorFecha.textContent = '';
+        fechaCorrecto = true;
     }
 
 
@@ -80,11 +94,31 @@ function validarTarjeta() {
     } else {
         tarjetaCvc.textContent = cvc.value;
         errorCvc.textContent = '';
+        cvcCorrecto = true;
+    }
+
+    if(nombreCorrecto && numeroCorrecto && fechaCorrecto && cvcCorrecto){
+        nombre.value = '';
+        numero.value = '';
+        mes.value = '';
+        year.value = '';
+        cvc.value = '';
+        containerForm.classList.add('inactive');
+        containerDatosEnviados.classList.remove('inactive');
     }
 }
 
 
 
 btnConfirmar.addEventListener('click', validarTarjeta, false);
+
+btnContinuar.addEventListener('click', ()=>{
+    containerDatosEnviados.classList.add('inactive');
+    containerForm.classList.remove('inactive');
+    tarjetaNombre.textContent = 'Nombre';
+    tarjetaNumero.textContent = '0000 0000 0000 0000';
+    tarjetaCvc.textContent = '000';
+    tarjetafecha.textContent = '00/00';
+},false);
 
 // 1212121212121212

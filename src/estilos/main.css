@@ -30,7 +30,7 @@ html {
 }
 .tarjeta__datos {
   top: 122px;
-  left: 10px;
+  left: calc(50% - 150px);
   background-image: url("../../images/bg-card-front.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -72,7 +72,7 @@ html {
 }
 .tarjeta__cvv {
   top: 30px;
-  right: 10px;
+  right: calc(50% - 150px);
   background-color: hsl(270deg, 3%, 87%);
   z-index: -1;
 }
@@ -143,6 +143,7 @@ html {
   color: white;
   font-size: 1.8rem;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .datosEnviados {
@@ -179,6 +180,33 @@ html {
 
 .inactive {
   display: none;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    display: flex;
+  }
+  .tarjeta {
+    width: 30%;
+    height: 100vh;
+    margin: 0 200px 0 0;
+  }
+  .tarjeta__datos {
+    top: 30%;
+    left: 50%;
+  }
+  .tarjeta__cvv {
+    top: 60%;
+    left: 60%;
+  }
+  .formulario {
+    width: 50%;
+    height: 100vh;
+    margin: 0;
+  }
+  .datosEnviados {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
